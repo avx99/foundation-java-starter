@@ -1,0 +1,9 @@
+spring.application.name: foundation-starter # TODO: à personnaliser
+
+logging.level.foundation.app: ${LOG_LEVEL:DEBUG}
+app.package: foundation.app # TODO: à personnaliser
+
+spring.config.import:
+  - classpath:application-foundation.yml
+  - classpath:openapi.yml
+

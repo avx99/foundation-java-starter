@@ -1,0 +1,5 @@
+app.db.links:
+  T1: h2://mem/T1
+  T2: h2://mem/T2
+
+
