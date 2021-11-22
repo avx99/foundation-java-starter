@@ -1,8 +1,8 @@
-package foundation.app.core.action.handler;
+package foundation.app.core.handlers;
 
 import foundation.app.api.model.EchoRequest;
 import foundation.app.api.model.EchoResponse;
-import foundation.app.core.action.Echo;
+import foundation.app.core.actions.Echo;
 import io.soffa.foundation.core.RequestContext;
 
 import javax.inject.Named;

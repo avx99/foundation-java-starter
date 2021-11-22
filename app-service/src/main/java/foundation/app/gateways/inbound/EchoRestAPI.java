@@ -3,7 +3,7 @@ package foundation.app.gateways.inbound;
 import foundation.app.api.EchoAPI;
 import foundation.app.api.model.EchoRequest;
 import foundation.app.api.model.EchoResponse;
-import foundation.app.core.action.Echo;
+import foundation.app.core.actions.Echo;
 import io.soffa.foundation.actions.ActionDispatcher;
 import io.soffa.foundation.core.RequestContext;
 import lombok.AllArgsConstructor;
