@@ -1,6 +1,6 @@
 package foundation.app.gateways.inbound;
 
-import io.soffa.foundation.actions.ActionDispatcher;
+import io.soffa.foundation.actions.EventHandler;
 import io.soffa.foundation.events.Event;
 import io.soffa.foundation.pubsub.PubSubListener;
 import lombok.AllArgsConstructor;
@@ -11,12 +11,12 @@ import org.springframework.stereotype.Component;
 @AllArgsConstructor
 public class AppEventListener implements PubSubListener {
 
-    private ActionDispatcher dispatcher;
+    private EventHandler eventHandler;
 
     @SneakyThrows
     @Override
     public void handle(Event event) {
-        dispatcher.handle(event);
+        eventHandler.handle(event);
     }
 
 }
