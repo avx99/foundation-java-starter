@@ -1,6 +1,7 @@
 package foundation.app;
 
 import foundation.app.api.model.EchoRequest;
+import io.soffa.foundation.service.state.DatabasePlane;
 import io.soffa.foundation.test.HttpExpect;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,9 +20,13 @@ public class ApplicationTest {
     @Autowired
     private MockMvc mvc;
 
+    @Autowired
+    private DatabasePlane dbPlane;
+
     @Test
     public void testActuator() {
         HttpExpect test = new HttpExpect(mvc);
+        dbPlane.await(); // Wait for database migrations
         test.get("/actuator/health").expect().isOK().json("$.status", equalTo("UP"));
     }
 

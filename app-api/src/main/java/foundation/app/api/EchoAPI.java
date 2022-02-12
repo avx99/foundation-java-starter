@@ -2,8 +2,8 @@ package foundation.app.api;
 
 import foundation.app.api.model.EchoRequest;
 import foundation.app.api.model.EchoResponse;
-import io.soffa.foundation.core.ApiHeaders;
-import io.soffa.foundation.core.RequestContext;
+import io.soffa.foundation.api.ApiHeaders;
+import io.soffa.foundation.context.RequestContext;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.tags.Tag;
