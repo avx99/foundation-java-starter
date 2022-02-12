@@ -16,7 +16,6 @@ import javax.ws.rs.Path;
 )
 public interface EchoAPI {
 
-
     @Operation(
         method = "POST",
         summary = "Echo the input message",
