@@ -3,7 +3,8 @@ package foundation.app.core.handlers;
 import foundation.app.api.model.EchoRequest;
 import foundation.app.api.model.EchoResponse;
 import foundation.app.api.operation.Echo;
-import io.soffa.foundation.context.RequestContext;
+import io.soffa.foundation.core.RequestContext;
+import org.checkerframework.checker.nullness.qual.NonNull;
 
 import javax.inject.Named;
 
@@ -11,8 +12,8 @@ import javax.inject.Named;
 public class EchoHandler implements Echo {
 
     @Override
-    public EchoResponse handle(EchoRequest request, RequestContext context) {
-        return new EchoResponse(request.getMessage());
+    public EchoResponse handle(EchoRequest input, @NonNull RequestContext context) {
+        return new EchoResponse(input.getMessage());
     }
 
 }

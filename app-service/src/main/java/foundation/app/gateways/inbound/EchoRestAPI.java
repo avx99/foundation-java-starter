@@ -4,8 +4,7 @@ import foundation.app.api.EchoAPI;
 import foundation.app.api.model.EchoRequest;
 import foundation.app.api.model.EchoResponse;
 import foundation.app.api.operation.Echo;
-import io.soffa.foundation.application.OperationDispatcher;
-import io.soffa.foundation.context.RequestContext;
+import io.soffa.foundation.core.RequestContext;
 import lombok.AllArgsConstructor;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -20,11 +19,11 @@ import javax.validation.Valid;
 @AllArgsConstructor
 public class EchoRestAPI implements EchoAPI {
 
-    private OperationDispatcher dispatcher;
+    private final Echo echoOp;
 
     @Override
     @PostMapping("echo")
-    public EchoResponse echo(@Valid @RequestBody EchoRequest request, RequestContext context) {
-        return dispatcher.dispatch(Echo.class, request, context);
+    public EchoResponse echo(@Valid @RequestBody EchoRequest input, RequestContext context) {
+        return echoOp.handle(input, context);
     }
 }

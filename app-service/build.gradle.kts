@@ -8,5 +8,5 @@ plugins {
 dependencies {
     implementation(project(":app-core"))
     implementation("io.soffa.foundation:soffa-foundation-service:${property("foundation.version")}")
-    testImplementation("io.soffa.foundation:soffa-foundation-test:${property("foundation.version")}")
+    testImplementation("io.soffa.foundation:soffa-foundation-service-test:${property("foundation.version")}")
 }

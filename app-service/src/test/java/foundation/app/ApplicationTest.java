@@ -1,7 +1,6 @@
 package foundation.app;
 
 import foundation.app.api.model.EchoRequest;
-import io.soffa.foundation.test.DatabaseTest;
 import io.soffa.foundation.test.HttpExpect;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,7 +14,7 @@ import static org.hamcrest.Matchers.equalTo;
 @SpringBootTest
 @AutoConfigureMockMvc
 @ActiveProfiles("test")
-public class ApplicationTest extends DatabaseTest {
+public class ApplicationTest {
 
     @Autowired
     private MockMvc mvc;
