@@ -1,7 +1,7 @@
 package foundation.app;
 
 import com.intuit.karate.junit5.Karate;
-import io.soffa.foundation.commons.TextUtil;;
+import io.soffa.foundation.commons.TextUtil;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -12,6 +12,7 @@ import org.springframework.test.context.ActiveProfiles;
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 @AutoConfigureMockMvc
 @ActiveProfiles("test")
+@SuppressWarnings("PMD.JUnit4TestShouldUseTestAnnotation") // PMD does not detect @KarateTest annotation
 class FeatureTest {
 
     @LocalServerPort
