@@ -8,6 +8,6 @@ Feature: nominal scenarios for echo api
         And request { message: "Hello world" }
         When method post
         Then status 200
-        And match response == { message: "Hello world" }
+        And match response == { content: "Hello world" }
 
 

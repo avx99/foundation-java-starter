@@ -1,4 +1,4 @@
-package foundation.app.api.model;
+package foundation.app.api.schema;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -7,8 +7,8 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class EchoResponse {
+public class Message {
 
-    private String message;
+    private String content;
 
 }

@@ -2,9 +2,9 @@ package foundation.app.gateways.inbound;
 
 import dev.soffa.foundation.context.Context;
 import foundation.app.api.EchoAPI;
-import foundation.app.api.model.EchoRequest;
-import foundation.app.api.model.EchoResponse;
-import foundation.app.api.operation.Echo;
+import foundation.app.api.usecases.EchoInput;
+import foundation.app.api.schema.Message;
+import foundation.app.api.usecases.Echo;
 import lombok.AllArgsConstructor;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -23,7 +23,7 @@ public class EchoRestAPI implements EchoAPI {
 
     @Override
     @PostMapping("echo")
-    public EchoResponse echo(@Valid @RequestBody EchoRequest input, Context context) {
+    public Message echo(@Valid @RequestBody EchoInput input, Context context) {
         return echoOp.handle(input, context);
     }
 }

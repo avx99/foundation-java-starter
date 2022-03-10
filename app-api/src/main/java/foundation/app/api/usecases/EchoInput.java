@@ -1,4 +1,4 @@
-package foundation.app.api.model;
+package foundation.app.api.usecases;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AllArgsConstructor;
@@ -10,7 +10,7 @@ import javax.validation.constraints.NotEmpty;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class EchoRequest {
+public class EchoInput {
 
     @NotEmpty
     @Schema(description = "The message to echo back")

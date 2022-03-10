@@ -1,7 +1,7 @@
 package foundation.app;
 
 import dev.soffa.foundation.test.spring.HttpExpect;
-import foundation.app.api.model.EchoRequest;
+import foundation.app.api.usecases.EchoInput;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
@@ -29,8 +29,8 @@ public class ApplicationTest {
     public void testEchoAPI() {
         HttpExpect test = new HttpExpect(mvc);
         test.post("/echo")
-            .withJson(new EchoRequest("Hello")).expect().isOK()
-            .json("$.message", equalTo("Hello"));
+            .withJson(new EchoInput("Hello")).expect().isOK()
+            .json("$.content", equalTo("Hello"));
     }
 
 }
