@@ -1,36 +1,27 @@
 package foundation.app;
 
 import com.intuit.karate.junit5.Karate;
-import io.soffa.foundation.commons.TextUtil;
-import org.springframework.beans.factory.annotation.Value;
+import dev.soffa.foundation.test.karate.KarateTester;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.boot.web.server.LocalServerPort;
 import org.springframework.test.context.ActiveProfiles;
+import org.springframework.test.web.servlet.MockMvc;
 
 
-@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+@SpringBootTest
 @AutoConfigureMockMvc
 @ActiveProfiles("test")
 @SuppressWarnings("PMD.JUnit4TestShouldUseTestAnnotation") // PMD does not detect @KarateTest annotation
 class FeatureTest {
 
-    @LocalServerPort
-    private int port;
-
-    @Value("${server.servlet.contextPath:}")
-    private String contextPath;
+    @Autowired
+    private MockMvc mockMvc;
 
     @Karate.Test
     public Karate testFeatures() {
-        return Karate.run(
-            feature("echo")
-        ).systemProperty("baseUrl", TextUtil.format("http://localhost:%d%s", port, contextPath));
+        return KarateTester.of(mockMvc).create("echo");
     }
 
-    @SuppressWarnings("SameParameterValue")
-    private String feature(String name) {
-        return "classpath:/feature/" + name + ".feature";
-    }
 
 }

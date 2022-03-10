@@ -1,8 +1,8 @@
 package foundation.app.api;
 
+import dev.soffa.foundation.context.Context;
 import foundation.app.api.model.EchoRequest;
 import foundation.app.api.model.EchoResponse;
-import io.soffa.foundation.core.RequestContext;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import io.swagger.v3.oas.annotations.tags.Tags;
@@ -19,6 +19,6 @@ public interface EchoAPI {
         summary = "Echo the input message"
     )
     @Path("echo")
-    EchoResponse echo(EchoRequest request, RequestContext context);
+    EchoResponse echo(EchoRequest request, Context context);
 
 }

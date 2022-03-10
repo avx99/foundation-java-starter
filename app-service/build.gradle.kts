@@ -6,6 +6,6 @@ plugins {
 
 dependencies {
     implementation(project(":app-core"))
-    implementation("io.soffa.foundation:foundation-service:${property("foundation.version")}")
-    testImplementation("io.soffa.foundation:foundation-service-test:${property("foundation.version")}")
+    implementation("dev.soffa.foundation:foundation-starter:${property("f4j.version")}")
+    testImplementation("dev.soffa.foundation:foundation-starter-test:${property("f4j.version")}")
 }

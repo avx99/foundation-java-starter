@@ -5,5 +5,5 @@ plugins {
 
 dependencies {
     api(project(":app-api"))
-    api("io.soffa.foundation:foundation-application:${property("foundation.version")}")
+    api("dev.soffa.foundation:foundation-core:${property("f4j.version")}")
 }
