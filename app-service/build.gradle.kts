@@ -1,7 +1,7 @@
 plugins {
     id("foundation.java8")
-    id("foundation.springboot")
-    id("foundation.qa.coverage.l4")
+    id("foundation.springboot") // Activation de springboot
+    id("foundation.qa.coverage.l4") // Requiert une couverture de test de 40%
 }
 
 dependencies {
