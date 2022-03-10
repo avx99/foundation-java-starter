@@ -1,4 +1,4 @@
-package foundation.app.gateways.inbound;
+package foundation.app.gateways.inbound.web;
 
 import dev.soffa.foundation.context.Context;
 import foundation.app.api.EchoResource;
