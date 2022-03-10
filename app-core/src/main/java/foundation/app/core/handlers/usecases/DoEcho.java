@@ -1,4 +1,4 @@
-package foundation.app.core.handlers.operations;
+package foundation.app.core.handlers.usecases;
 
 import dev.soffa.foundation.context.Context;
 import foundation.app.api.usecases.EchoInput;
@@ -9,7 +9,7 @@ import org.checkerframework.checker.nullness.qual.NonNull;
 import javax.inject.Named;
 
 @Named
-public class EchoHandler implements Echo {
+public class DoEcho implements Echo {
 
     @Override
     public Message handle(EchoInput input, @NonNull Context context) {

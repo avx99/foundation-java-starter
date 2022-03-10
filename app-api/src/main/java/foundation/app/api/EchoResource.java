@@ -14,7 +14,7 @@ import javax.ws.rs.Path;
 @Tags(
     @Tag(name = "Echo", description = "All things echo messaging")
 )
-public interface EchoAPI {
+public interface EchoResource {
 
     @Operation(
         method = "POST",

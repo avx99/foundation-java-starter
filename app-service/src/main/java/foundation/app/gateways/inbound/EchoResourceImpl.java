@@ -1,7 +1,7 @@
 package foundation.app.gateways.inbound;
 
 import dev.soffa.foundation.context.Context;
-import foundation.app.api.EchoAPI;
+import foundation.app.api.EchoResource;
 import foundation.app.api.usecases.EchoInput;
 import foundation.app.api.schema.Message;
 import foundation.app.api.usecases.Echo;
@@ -17,13 +17,13 @@ import javax.validation.Valid;
 @RestController
 @RequestMapping(produces = MediaType.APPLICATION_JSON_VALUE)
 @AllArgsConstructor
-public class EchoRestAPI implements EchoAPI {
+public class EchoResourceImpl implements EchoResource {
 
-    private final Echo echoOp;
+    private final Echo doEcho;
 
     @Override
     @PostMapping("echo")
     public Message echo(@Valid @RequestBody EchoInput input, Context context) {
-        return echoOp.handle(input, context);
+        return doEcho.handle(input, context);
     }
 }
