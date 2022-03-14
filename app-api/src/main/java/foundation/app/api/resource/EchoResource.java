@@ -1,5 +1,6 @@
 package foundation.app.api.resource;
 
+import dev.soffa.foundation.context.Context;
 import dev.soffa.foundation.resource.Resource;
 import foundation.app.api.schema.Message;
 import foundation.app.api.usecase.Echo;
@@ -23,7 +24,7 @@ public interface EchoResource extends Resource {
         summary = "Echo the input message"
     )
     @PostMapping("echo")
-    default Message echo(@Valid @RequestBody EchoInput input) {
+    default Message echo(@Valid @RequestBody EchoInput input, Context context) {
         return invoke(Echo.class, input);
     }
 
