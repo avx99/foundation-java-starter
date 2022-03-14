@@ -1,10 +1,6 @@
-// Nom du projet à personnaliser
-rootProject.name = "foundation-starter"
+rootProject.name = "foundation-starter" //TODO: Change this to your project name
 
-// Indique à Gradle qu'il s'agit d'un projet composé de 3 modules
-include(":app-api")
-include(":app-core") // utilise :app-api
-include(":app-service") // utilise :app-service
-
-
-
+listOf("api", "service").forEach {
+    include(":app-$it")
+    project(":app-$it").name = rootProject.name + "-$it"
+}

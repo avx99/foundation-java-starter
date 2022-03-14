@@ -1,4 +1,4 @@
-package foundation.app.api.usecases;
+package foundation.app.api.schema;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AllArgsConstructor;

@@ -1,27 +1,20 @@
 package foundation.app;
 
-import com.intuit.karate.junit5.Karate;
-import dev.soffa.foundation.test.karate.KarateTester;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.ActiveProfiles;
-import org.springframework.test.web.servlet.MockMvc;
+import dev.soffa.foundation.test.BaseFeatureTest;
+import org.checkerframework.com.google.common.collect.ImmutableMap;
+
+import java.util.Map;
 
 
-@SpringBootTest
-@AutoConfigureMockMvc
-@ActiveProfiles("test")
-@SuppressWarnings("PMD.JUnit4TestShouldUseTestAnnotation") // PMD does not detect @KarateTest annotation
-class FeatureTest {
+class FeatureTest extends BaseFeatureTest {
 
-    @Autowired
-    private MockMvc mockMvc;
-
-    @Karate.Test
-    public Karate testFeatures() {
-        return KarateTester.of(mockMvc).create("echo");
+    @Override
+    public String[] getFeatures() {
+        return new String[]{"echo"};
     }
 
-
+    @Override
+    public Map<String, Object> getTestData() {
+        return ImmutableMap.of();
+    }
 }

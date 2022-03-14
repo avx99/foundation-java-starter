@@ -7,13 +7,8 @@ buildscript {
         }
     }
     dependencies {
-        classpath("dev.soffa.foundation:foundation-gradle-plugin:1.0.6")
+        classpath("dev.soffa.foundation:foundation-gradle-plugin:1.0.9")
     }
 }
 
-subprojects {
-    repositories {
-        mavenLocal()
-        mavenCentral()
-    }
-}
+apply(plugin = "foundation.project.kotlin")

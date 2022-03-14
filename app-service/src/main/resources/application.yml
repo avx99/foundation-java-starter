@@ -1,9 +1,3 @@
-spring.application.name: foundation-starter
+app.name: foundation-starter
 
-logging.level.foundation.app: ${LOG_LEVEL:DEBUG}
-app.package: foundation.app
-
-spring.config.import:
-  - classpath:application-foundation.yml
-  - classpath:openapi.yml
 

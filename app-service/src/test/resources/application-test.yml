@@ -1,9 +1,0 @@
-app.db.datasources:
-  default:
-    url: h2://mem/default
-  T1:
-    url: h2://mem/T1
-  T2:
-    url: h2://mem/T2
-
-
