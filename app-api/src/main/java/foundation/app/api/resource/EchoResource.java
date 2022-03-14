@@ -25,7 +25,7 @@ public interface EchoResource extends Resource {
     )
     @PostMapping("echo")
     default Message echo(@Valid @RequestBody EchoInput input, Context context) {
-        return invoke(Echo.class, input);
+        return invoke(Echo.class, input, context);
     }
 
 }
