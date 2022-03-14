@@ -15,7 +15,7 @@ import javax.validation.Valid;
 @Tags(
     @Tag(name = "Echo", description = "All things echo messaging")
 )
-@RestController // Cette interface sera implémentée automatiquement lorsque cette annotation est présente
+@RestController // Cette interface sera implémentée automatiquement lorsque cette annotation est présente + Resource
 public interface EchoResource extends Resource {
 
     @Operation(
