@@ -7,8 +7,8 @@ buildscript {
         }
     }
     dependencies {
-        classpath("dev.soffa.foundation:foundation-gradle-plugin:1.0.9")
+        classpath("dev.soffa.foundation:foundation-gradle-plugin:1.0.10")
     }
 }
 
-apply(plugin = "foundation.project.kotlin")
+apply(plugin = "foundation.project")
