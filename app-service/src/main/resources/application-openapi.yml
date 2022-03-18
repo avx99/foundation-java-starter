@@ -1,0 +1,22 @@
+app.openapi:
+  info:
+    title: Demo API
+    version: 1.0.0
+    description: Foundation demo API # Markdown supported
+    contact:
+      name: Name of your team
+      url: http://noop
+      email: noreply@email.com
+  #security:
+  #  bearerAuth: true
+  #  basicAuth: true
+  #  oauth2:
+  #    url: ${OAUTH2_SERVER:http://localhost:9000}
+  #    scopes: ${OAUTH2_SCOPES:openid}
+  #    authorizationCode: true
+  #parameters:
+  #  - name: X-TenantId
+  #    in: header
+  #    description: Description of the header paramter # Markdown supported
+  #    values: [ T1, T2n ]
+
