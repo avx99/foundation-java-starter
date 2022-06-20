@@ -10,8 +10,8 @@ import org.checkerframework.checker.nullness.qual.NonNull;
 import javax.inject.Named;
 
 @Named
-@Feature(name = "features.echo")
-public class DoEcho implements Echo {
+@Feature(name = "features.echo.v2")
+public class DoEchoV2 implements Echo {
 
     @Override
     public Message handle(EchoInput input, @NonNull Context context) {
